@@ -242,3 +242,135 @@ a {
     stroke-dashoffset: 0;
   }
 }
+
+/* Gempa */
+.gempa-wrap {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+.label-kecil {
+  font-size: 0.9rem;
+  color: var(--tinta-lembut);
+  font-weight: 600;
+}
+.gempa-terbaru {
+  border-left: 6px solid var(--amber);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  display: grid;
+  gap: 0.6rem;
+}
+.gempa-besar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  line-height: 1.2;
+}
+.gempa-potensi {
+  font-weight: 600;
+  color: var(--laut-tua);
+}
+.gempa-meta {
+  font-size: 0.95rem;
+  color: var(--tinta-lembut);
+}
+.shakemap {
+  max-width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--garis);
+  background: var(--putih);
+}
+.mag {
+  display: inline-grid;
+  place-items: center;
+  min-width: 3rem;
+  height: 3rem;
+  padding: 0 0.5rem;
+  border-radius: 50%;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  color: #fff;
+  flex: none;
+}
+.mag-besar {
+  min-width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.6rem;
+}
+.mag-ringan {
+  background: var(--laut);
+}
+.mag-sedang {
+  background: #b87400;
+}
+.mag-kuat {
+  background: var(--merah);
+}
+.tab {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 1px solid var(--garis);
+  margin-bottom: 1rem;
+}
+.tab button {
+  font: inherit;
+  font-weight: 600;
+  background: none;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  color: var(--tinta-lembut);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  min-height: 44px;
+}
+.tab button.aktif {
+  color: var(--laut-tua);
+  border-bottom-color: var(--laut);
+}
+.gempa-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+.gempa-baris {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: start;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--garis);
+}
+.gempa-baris:last-child {
+  border-bottom: none;
+}
+.gempa-wilayah {
+  font-weight: 600;
+  line-height: 1.35;
+}
+.sumber {
+  font-size: 0.875rem;
+  color: var(--tinta-lembut);
+  margin-top: 1rem;
+}
+.pesan-error {
+  background: #fbe6e1;
+  color: #7a1f10;
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media (max-width: 860px) {
+  .gempa-wrap {
+    grid-template-columns: 1fr;
+  }
+}

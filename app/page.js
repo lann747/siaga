@@ -1,4 +1,5 @@
 import Seismogram from "../components/Seismogram";
+import GempaPanel from "../components/GempaPanel";
 
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
               Data langsung dari BMKG. Gunakan untuk memahami wilayah yang baru
               saja berguncang.
             </p>
-            <p className="muted">(Fitur gempa akan dipasang di Tahap 3)</p>
+            <GempaPanel />
           </div>
         </section>
 
